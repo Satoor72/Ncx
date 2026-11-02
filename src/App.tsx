@@ -243,13 +243,13 @@ export default function App() {
   };
 
   return (
-    <div className="relative h-[100dvh] w-screen overflow-hidden bg-black font-inter">
+    <div className="app-shell relative w-screen overflow-hidden bg-black font-inter">
       <video
         autoPlay
         muted
         loop
         playsInline
-        className="absolute inset-0 h-full w-full object-cover"
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover"
       >
         <source
           src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260606_154941_df1a96e1-a06f-450c-bd02-d863414cc1a0.mp4"
@@ -257,7 +257,7 @@ export default function App() {
         />
       </video>
 
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="pointer-events-none absolute inset-0 z-10 bg-black/60" />
 
       {/* Navbar */}
       <nav className="absolute top-0 z-40 flex w-full items-center justify-between px-6 py-5 sm:px-10 lg:px-16 lg:py-7">
